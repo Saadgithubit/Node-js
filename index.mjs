@@ -11,7 +11,7 @@ const port = PORT || 3001
 
 db.connection.once('open', () => console.log("connected to db")).on("error", (err) => console.log("error connecting db -->", err))
 
-app.listen(PORT, function(){
+app.listen(port, function(){
     console.log(`Server is running at port ${port}`)
 
 })
