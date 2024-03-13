@@ -7,10 +7,12 @@ import { PORT } from './config/environment.mjs'
 
 const app = express()
 
+const port = PORT || 3001
+
 db.connection.once('open', () => console.log("connected to db")).on("error", (err) => console.log("error connecting db -->", err))
 
 app.listen(PORT, function(){
-    console.log(`Server is running at port ${PORT}`)
+    console.log(`Server is running at port ${port}`)
 
 })
 
