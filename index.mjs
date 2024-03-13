@@ -1,23 +1,23 @@
-import express from 'express'
-import cros from 'cors'
+import express from 'express';
+import cors from 'cors'; // Fixed typo here
 
-import routes from './routes/index.mjs'
-import db from './config/db.mjs'
-import { PORT } from './config/environment.mjs'
+import routes from './routes/index.mjs';
+import db from './config/db.mjs';
+import { PORT } from './config/environment.mjs';
 
-const app = express()
+const app = express();
 
-const port = PORT || 3001
+const port = PORT || 3001;
 
-db.connection.once('open', () => console.log("connected to db")).on("error", (err) => console.log("error connecting db -->", err))
+db.connection.once('open', () => console.log("Connected to database"))
+  .on("error", (err) => console.error("Error connecting to database:", err)); // Handle DB connection errors
 
-app.listen(port, function(){
-    console.log(`Server is running at port ${port}`)
+app.listen(port, () => {
+    console.log(`Server is running at port ${port}`);
+});
 
-})
+app.use(cors()); // Use cors middleware to handle Cross-Origin Resource Sharing
 
-app.use(cros())
+app.use(express.json());
 
-app.use(express.json())
-
-app.use('/',routes)
+app.use('/', routes);
