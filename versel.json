@@ -8,8 +8,8 @@
     ],
     "routes":[
         {
-            "src":"/(.*)",
-            "dest":"/routes/index.mjs"
+            "src":"/api/(.*)",
+            "dest":"/index.mjs"
         }
     ]
 }
