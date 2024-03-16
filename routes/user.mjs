@@ -63,7 +63,7 @@ router.put('/login', async (req, res) => {
         user.tokens.push(token)
         await user.save()
 
-        res.send({ message: 'User Login Successfull' , token})
+        res.send({ message: 'User Login Successfull' ,usertoken: token,userdata: user})
     }
     catch (e) {
         res.send({ message: e.message })
