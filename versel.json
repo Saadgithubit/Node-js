@@ -2,14 +2,14 @@
     "version":2,
     "builds":[
         {
-            "src":"./index.mjs",
+            "src":"./srcindex.mjs",
             "use":"@vercel/node"
         }
     ],
     "routes":[
         {
-            "src":"/(.*)",
-            "dest":"/"
+            "src":"/src/(.*)",
+            "dest":"/src/"
         }
     ]
 }
