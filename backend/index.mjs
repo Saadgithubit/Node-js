@@ -1,5 +1,5 @@
 import express from 'express';
-import cros from 'cors'; // Fixed typo here
+import cors from 'cors'; // Fixed typo here
 
 import routes from './routes/index.mjs';
 import db from './config/db.mjs';
@@ -16,7 +16,7 @@ app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
 });
 
-app.use(cros()); // Use cors middleware to handle Cross-Origin Resource Sharing
+app.use(cors()); // Use cors middleware to handle Cross-Origin Resource Sharing
 
 app.use(express.json());
 
