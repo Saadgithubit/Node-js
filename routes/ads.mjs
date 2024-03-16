@@ -1,7 +1,7 @@
 import express from 'express'
 const router = express.Router()
 
-import Ads from '../models/ads.mjs'
+import Ads from '../models/adsSchema.mjs'
 import verifyToken from '../middlewares/verifyToken.mjs'
 
 

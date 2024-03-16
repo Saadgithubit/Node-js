@@ -7,7 +7,7 @@ import { PORT } from './config/environment.mjs';
 
 const app = express();
 
-const port = PORT || 5000;
+const port = PORT || 3002;
 
 db.connection.once('open', () => console.log("Connected to database"))
   .on("error", (err) => console.error("Error connecting to database:", err)); // Handle DB connection errors

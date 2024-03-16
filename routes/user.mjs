@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router()
 
-import User from "../models/user.mjs";
+import User from "../models/userSchema.mjs";
 import verifyToken from "../middlewares/verifyToken.mjs";
 
 //GET: '/'
