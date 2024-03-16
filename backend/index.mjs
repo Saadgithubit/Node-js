@@ -16,7 +16,7 @@ app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
 });
 
-app.use(cors()); // Use cors middleware to handle Cross-Origin Resource Sharing
+app.use(cros()); // Use cors middleware to handle Cross-Origin Resource Sharing
 
 app.use(express.json());
 
