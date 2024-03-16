@@ -14,6 +14,11 @@ db.connection.once('open', () => console.log("Connected to database"))
 
 app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
+    
+});
+
+app.get("/message", (req, res) => {
+  res.json({ message: "Hello from server!" });
 });
 
 app.use(cors()); 
