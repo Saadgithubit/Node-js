@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.mjs",
-  "engines": {
-    "node": "20.x"
-  },
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.mjs",
-    "dev": "nodemon src/index.mjs"
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs"
   },
   "author": "",
   "license": "ISC",
