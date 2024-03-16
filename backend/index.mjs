@@ -7,7 +7,7 @@ import { PORT } from './config/environment.mjs';
 
 const app = express();
 
-const port = PORT || 3001;
+const port = PORT || 5000;
 
 db.connection.once('open', () => console.log("Connected to database"))
   .on("error", (err) => console.error("Error connecting to database:", err)); // Handle DB connection errors
@@ -16,7 +16,7 @@ app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
 });
 
-app.use(cors()); // Use cors middleware to handle Cross-Origin Resource Sharing
+app.use(cors()); 
 
 app.use(express.json());
 
