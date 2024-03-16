@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from 'cors'; // Fixed typo here
+import cros from 'cors'; // Fixed typo here
 
 import routes from './routes/index.mjs';
 import db from './config/db.mjs';
