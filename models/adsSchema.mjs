@@ -14,6 +14,10 @@ const adsSchema = new Schema({
         type: Number,
         required: true
     },
+    images:{
+        type: String,
+        required: true
+    }
 });
 
 const Ads = mongoose.model('ads', adsSchema);
