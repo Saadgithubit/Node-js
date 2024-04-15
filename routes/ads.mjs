@@ -10,6 +10,13 @@ router.get('/', async (req, res) => {
     res.send({ message: 'Ads fetched successfully', data: ads })
 })
 
+router.get('/singleAd/:id', async(req, res) => {
+    const { id } = req.params
+    const singleAd = await Ads.findById(id)
+    res.json({ message: 'data fetched successfully', data: singleAd,});
+    // res.send({id: id})
+})
+
 // router.get('/:id')
 
 //POST: localhost:3001/ads/post
