@@ -45,7 +45,22 @@ router.put('/:id' , async (req , res) => {
     }
 })
 
-//router.delete('/:id')
+router.delete('/delete/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        const deletedAd = await Ads.findByIdAndDelete(id);
+        if (deletedAd) {
+            res.json({ message: 'Ad Deleted Successfully' });
+        } else {
+            res.status(404).json({ message: 'Ad not found' });
+        }
+    } catch (error) {
+        console.error('Error deleting ad:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+
 
 
 
