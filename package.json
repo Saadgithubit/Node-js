@@ -2,12 +2,12 @@
   "name": "practice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.mjs",
+  "main": "server.mjs",
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.mjs",
-    "dev": "nodemon index.mjs"
+    "start": "node server.mjs",
+    "dev": "nodemon server.mjs"
   },
   "author": "",
   "license": "ISC",
