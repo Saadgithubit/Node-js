@@ -21,6 +21,12 @@ app.get("/message", (req, res) => {
   res.send({ message: "Hello from server!" });
 });
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+
 app.use(cros()); 
 
 app.use(express.json());
