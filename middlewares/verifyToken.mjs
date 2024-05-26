@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import User from '../models/UserSchema.mjs';
+import User from '../models/userSchema.mjs';
 import jwtSecret from '../config/jwt.mjs';
 
 async function verifyToken(req, res, next) {
